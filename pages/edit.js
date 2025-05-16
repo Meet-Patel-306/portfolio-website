@@ -146,6 +146,19 @@ const Edit = () => {
     });
   };
 
+  const handleDeleteExperiences = (id) => {
+    const updatedExperiences = data.resume.experiences.filter(
+      (experience) => experience.id !== id
+    );
+    setData({
+      ...data,
+      resume: {
+        ...data.resume,
+        experiences: updatedExperiences,
+      },
+    });
+  };
+
   return (
     <div className={`container mx-auto ${data.showCursor && "cursor-none"}`}>
       <Header isBlog></Header>
@@ -587,7 +600,7 @@ const Edit = () => {
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{experiences.position}</h1>
                     <Button
-                      // onClick={() => deleteProject(project.id)}
+                      onClick={() => handleDeleteExperiences(experiences.id)}
                       type="primary"
                     >
                       Delete
