@@ -46,17 +46,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   </Button>
                 )}
 
-                <Popover.Button>
+                <Popover.Button className={"text-slate-200"}>
                   <img
                     className="h-5"
                     src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
+                      !open ? "menu-white.svg" : "cancel-white.svg"
                     }`}
                   ></img>
                 </Popover.Button>
@@ -125,7 +119,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         // className={`mt-10 hidden flex-row items-center justify-between ${
         //   theme === "light" && "bg-white"
         // } dark:text-white top-0 z-10 tablet:flex`}
-        className={`mt-10 hidden flex-row items-center justify-between dark:text-white top-0 z-10 tablet:flex`}
+        className={`mt-10 hidden flex-row items-center justify-between text-white top-0 z-10 tablet:flex`}
       >
         <h1
           onClick={() => router.push("/")}
