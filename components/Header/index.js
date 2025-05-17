@@ -63,9 +63,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
-                theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}
+              // className={`absolute right-0 z-10 w-11/12 p-4 ${
+              //   theme === "dark" ? "bg-slate-800" : "bg-white"
+              // } shadow-md rounded-md`}
+              className={`absolute right-0 z-10 w-11/12 p-4 bg-slate-800 shadow-md rounded-md`}
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
@@ -121,9 +122,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
+        // className={`mt-10 hidden flex-row items-center justify-between ${
+        //   theme === "light" && "bg-white"
+        // } dark:text-white top-0 z-10 tablet:flex`}
+        className={`mt-10 hidden flex-row items-center justify-between dark:text-white top-0 z-10 tablet:flex`}
       >
         <h1
           onClick={() => router.push("/")}
